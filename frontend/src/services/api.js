@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000/api";
+const BASE_URL = "https://workspace-booking-backend-6tvk.onrender.com/";
 
 export async function getRooms() {
   const res = await fetch(`${BASE_URL}/rooms`);
@@ -21,7 +21,7 @@ export async function getAdminAnalytics() {
 }
 
 export async function cancelBooking(bookingId) {
-  const res = await fetch(`http://localhost:5000/api/bookings/${bookingId}`, {
+  const res = await fetch(`${BASE_URL}/api/bookings/${bookingId}`, {
     method: "DELETE"
   });
   return res.json();
